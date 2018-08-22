@@ -1,30 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
 
-import gql from "graphql-tag";
-import { Query } from "react-apollo";
+import Search from "./search";
+import ItemWrapper from "./listItemWrapper";
 
 const ListView = () => (
-	<Query
-		query={gql`
-			{
-				rates(currency: "USD") {
-					currency
-					rate
-				}
-			}
-		`}>
-		{({ loading, error, data }) => {
-			if (loading) return <p>Loading...</p>;
-			if (error) return <p>Error :(</p>;
-
-			return data.rates.map(({ currency, rate }) => (
-				<div key={currency}>
-					<p>{`${currency} at ${rate}`}</p>
-				</div>
-			));
-		}}
-	</Query>
+	<div className="listView">
+		<h3 className="appHeader">Enter cryptocurrencies</h3>
+		<Search />
+		<ItemWrapper />
+	</div>
 );
 
 export default ListView;

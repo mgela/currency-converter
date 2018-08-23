@@ -11,6 +11,7 @@ class Search extends Component {
 					name={"CurrencyA"}
 					maxLength="3"
 					minLength="3"
+					placeholder="Enter currency"
 				/>
 				<input
 					type="text"
@@ -19,6 +20,7 @@ class Search extends Component {
 					name={"CurrencyB"}
 					maxLength="3"
 					minLength="3"
+					placeholder="Enter currency"
 				/>
 			</div>
 		);

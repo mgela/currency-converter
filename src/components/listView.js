@@ -27,7 +27,7 @@ class ListView extends React.Component {
 	render() {
 		return (
 			<div className="listView">
-				<h3 className="appHeader">Enter cryptocurrencies</h3>
+				<h3 className="appHeader">Currency converter</h3>
 				<Search handleCurrency={this.handleText} />
 				{this.renderCurrencies()}
 			</div>

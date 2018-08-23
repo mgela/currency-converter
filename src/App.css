@@ -17,10 +17,12 @@ body {
 }
 .appHeader {
 	text-align: center;
+	font-family: "Teko";
+	font-size: 60px;
 }
 
 .listView {
-	background-color: orange;
+	background-color: #1cebf4;
 	width: 75%;
 	height: 75%;
 	position: relative;
@@ -30,10 +32,12 @@ body {
 	bottom: 0;
 	width: 100%;
 	height: 50%;
-	background-color: green;
+	background-color: #1cebf4;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 .inputsWrapper {
 	display: flex;
@@ -49,8 +53,8 @@ body {
 	height: 30px;
 	border-radius: 10px;
 	border: none;
-	font-size: 36px;
-	color: purple;
+	font-size: 24px;
+	color: #1cebf4;
 	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
@@ -60,4 +64,28 @@ body {
 .inputs:focus {
 	background-color: yellow;
 	outline: none;
+}
+.inputs:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
+.currencyItem {
+	text-align: center;
+	font-family: "Teko";
+	font-size: 60px;
+}
+.resultWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+	.appHeader {
+		font-size: 40px;
+	}
+	.inputs {
+		font-size: 14px;
+		letter-spacing: 0;
+	}
 }

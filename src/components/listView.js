@@ -10,16 +10,26 @@ class ListView extends React.Component {
 	}
 
 	handleText = evt => {
-		this.setState({ [evt.target.name]: evt.target.value });
+		this.setState({ [evt.target.name]: evt.target.value.toUpperCase() });
+	};
+
+	renderCurrencies = () => {
+		return this.state.CurrencyB &&
+			this.state.CurrencyB.length > 2 &&
+			this.state.CurrencyA &&
+			this.state.CurrencyA.length > 2 ? (
+			<ItemWrapper
+				currencyA={this.state.CurrencyA}
+				currencyB={this.state.CurrencyB}
+			/>
+		) : null;
 	};
 	render() {
 		return (
 			<div className="listView">
 				<h3 className="appHeader">Enter cryptocurrencies</h3>
 				<Search handleCurrency={this.handleText} />
-				{this.state.CurrencyA ? (
-					<ItemWrapper currency={this.state.CurrencyA} />
-				) : null}
+				{this.renderCurrencies()}
 			</div>
 		);
 	}

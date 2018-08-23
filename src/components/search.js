@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 
 class Search extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
-
-	handleText = evt => {
-		this.setState({ [evt.target.name]: evt.target.value });
-	};
-
 	render() {
 		return (
 			<div className="inputsWrapper">

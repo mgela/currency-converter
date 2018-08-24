@@ -6,9 +6,9 @@ import { getRatez } from "../queries";
 
 const NoCurrency = () => (
 	<div>
-		<p className="currencyItem">No currency available, please use any from:</p>
-		<a href="https://coinmarketcap.com/all/views/all/">
-			<h3 className="currencyItem">Coinbase</h3>
+		<p className="currencyItem">None available, please use any from:</p>
+		<a href="https://www.ibm.com/support/knowledgecenter/en/SSZLC2_7.0.0/com.ibm.commerce.payments.developer.doc/refs/rpylerl2mst97.htm">
+			<h3 className="currencyItem">Currency ISO Codes List</h3>
 		</a>
 	</div>
 );
